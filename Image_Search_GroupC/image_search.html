@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,27 +8,32 @@
     <title>Image Search</title>
     <meta name="description" content="Search for Images with Pixibay">
     <link rel="stylesheet" href="style.css">
-    <script src="Image_Search.js" defer></script> 
+    <script src="Image_Search.js" defer></script>
 </head>
 
 <body>
 
-    <header class= "header-container">
+    <header class="header-container">
         <img class="image-container" src="https://www.tripsavvy.com/thmb/FwmQ-JvBEBDDlVb-j_zdEo0iVsA=/2048x1152/smart/filters:no_upscale()/beach-5b59c9b7c9e77c004b3e0ff0.jpg">
         <h1 class="logo-container">Pixibay Image Search</h1>
     </header>
 
     <main>
-        <section id="search-bar">
+        <form id="search-bar">
             <input type="text" placeholder="Search..">
             <input type="text" placeholder="Colour..">
             <button type="button">Search</button>
-        </section>
+        </form>
         <section id="results">
-            <img class="result-image" src="https://cdn.theatlantic.com/thumbor/mORGMuM_Oh1Rc3YJzLc3bwoApIY=/1071x0:3826x2755/1080x1080/media/img/mt/2021/07/GettyImages_473437806_copy/original.jpg">
-            <h2>Image Tags</h2>
-            <h3>Taken by:</h3>
-            
+            <ul id="results-image-list">
+                <template id="results-template">
+                 <li id=results-image>
+                    <img class="results-image" src="">
+                    <p class="results-image-tag"></p>
+                    <p class="results-image-user"></p>
+                </li>
+                </template>
+            </ul>
         </section>
         <section id="page-buttons">
             <button type="button"><</button>
@@ -37,6 +43,7 @@
     <footer>
         <p>Pixibay Search by By Rano and Julia</p>
     </footer>
-    
+
 </body>
+
 </html>
