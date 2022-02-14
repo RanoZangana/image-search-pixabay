@@ -30,13 +30,21 @@ html {
 }
 
 #search-bar {
-    display: grid;
-    justify-items: center;
-    grid-row-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#results-image-list
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style-type: none;
 }
 
 .results-image {
-    width: 200px;
+    width: 360px;
 }
 
 input {
