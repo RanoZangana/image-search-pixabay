@@ -13,7 +13,6 @@ html {
     display: grid;
     justify-items: center;
     align-items: center;
-    
 }
 
 .image-container {
@@ -45,8 +44,7 @@ input {
     font-size: large;
 }
 
-#results-image-list
-{
+#results-image-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -56,7 +54,6 @@ input {
 .results-image {
     width: 360px;
 }
-
 
 #page-buttons {
     display: flex;
@@ -74,6 +71,14 @@ button {
     display: inline-block;
     font-size: 16px;
     border-radius: 10px;
+}
+
+button:active {
+    background-color: rgb(139, 213, 216);
+}
+
+button:hover:not(:disabled) {
+    background-color: rgb(139, 213, 216);
 }
 
 footer {
