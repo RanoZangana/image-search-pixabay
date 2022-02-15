@@ -2,10 +2,12 @@ let currentSearchTag = '';
 let currentSearchColor = '';
 let currentPage = 1;
 let totalHits = 0;
+let imageTemplate = document.querySelector('#results-template');
 
 Start();
 
 function Start() {
+    imageTemplate.remove(); //global
     SetPageButtonStatus();
     SetSearchForm();
     NextPageButton();
@@ -17,29 +19,31 @@ function SetSearchForm() {
     let searchTag = document.querySelector('#search-tag');
     let searchColor = document.querySelector('#search-color');
 
-    searchForm.onsubmit = event => {
+    searchForm.onsubmit = function(event) {
+        event.preventDefault();
+
         currentSearchTag = searchTag.value; //global
         currentSearchColor = searchColor.value; //global
-        event.preventDefault();
-        SearchPixabay(searchTag.value, searchColor.value, 1);
+
+        SearchPixabay(currentSearchTag, currentSearchColor, 1);
     }
 
 }
 
 function SetPageButtonStatus() {
-    let previousButton = document.querySelector('#previous')
-    let nextButton = document.querySelector('#next');
-    previousButton.disabled = false;
-    nextButton.disabled = false;
+    let backButton = document.querySelector('#back')
+    let forwardButton = document.querySelector('#forward');
+    backButton.disabled = false;
+    forwardButton.disabled = false;
     if (totalHits === 0) {
-        previousButton.disabled = true;
-        nextButton.disabled = true;
+        backButton.disabled = true;
+        forwardButton.disabled = true;
     }
     if (totalHits <= currentPage * 10) {
-        nextButton.disabled = true;
+        forwardButton.disabled = true;
     }
     if (currentPage <= 1) {
-        previousButton.disabled = true;
+        backButton.disabled = true;
     }
 }
 
@@ -48,7 +52,7 @@ async function myPixabayParam(searchTag, searchColor, pageNumber) {
         key: '25592393-ccf7ee53d7b027ae015f7e308',
         per_page: 10,
         q: searchTag,
-        color: searchColor,
+        colors: searchColor,
         page: pageNumber
     })
     const myApi = 'https://pixabay.com/api/?' + param.toString();
@@ -72,10 +76,9 @@ async function SearchPixabay(searchTag, searchColor, pageNumber) {
     currentPage = pageNumber; //global
 
     let resultImageList = document.querySelector('#results-image-list');
-    let imageTemplate = document.querySelector('#results-template');
-    imageTemplate.remove();
 
-    for (let image of jsonData.hits) {
+
+    for (let image of jsonPixabay.hits) {
         let li = imageTemplate.content.firstElementChild.cloneNode(true);
         li.querySelector('.results-image').src = image.largeImageURL;
         li.querySelector('.results-image-tag').textContent = image.tags;
@@ -87,15 +90,15 @@ async function SearchPixabay(searchTag, searchColor, pageNumber) {
 
 function PreviousPageButton() {
 
-    let previousButton = document.querySelector('#previous');
-    previousButton.onclick = () => {
+    let backButton = document.querySelector('#back');
+    backButton.onclick = () => {
         ChangePageNumber(--currentPage);
     }
 }
 
 function NextPageButton() {
-    let nextButton = document.querySelector('#next');
-    nextButton.onclick = () => {
+    let forwardButton = document.querySelector('#forward');
+    forwardButton.onclick = () => {
         ChangePageNumber(++currentPage);
     }
 }

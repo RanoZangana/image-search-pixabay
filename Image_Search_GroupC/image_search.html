@@ -8,7 +8,7 @@
     <title>Image Search</title>
     <meta name="description" content="Search for Images with Pixibay">
     <link rel="stylesheet" href="style.css">
-    <script src="Image_Search.js" defer></script>
+    <script src="image_search.js" defer></script>
 </head>
 
 <body>
@@ -19,10 +19,10 @@
     </header>
 
     <main>
-        <form id="search-bar">
-            <input type="text" placeholder="Search..">
-            <input type="text" placeholder="Colour..">
-            <button type="button">Search</button>
+        <form id="search-form">
+            <input type="text" id="search-tag" placeholder="Search..">
+            <input type="text" id="search-color" placeholder="Colour..">
+            <button type="submit">Search</button>
         </form>
 
         <section id="results">
@@ -38,8 +38,8 @@
         </section>
 
         <section id="page-buttons">
-            <button type="button-back"><</button>
-            <button type="button-forward">></button>
+            <button type="button" id="back"><</button>
+            <button type="button" id="forward">></button>
         </section>
 
     </main>
