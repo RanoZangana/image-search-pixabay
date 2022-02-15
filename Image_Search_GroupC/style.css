@@ -44,6 +44,13 @@ input {
     font-size: large;
 }
 
+#search-color
+{
+    border-radius: 10px;
+    font-family: Century Gothic;
+    font-size: large;
+}
+
 #results-image-list {
     display: flex;
     flex-wrap: wrap;
