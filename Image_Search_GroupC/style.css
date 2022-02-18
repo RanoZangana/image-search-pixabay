@@ -27,9 +27,13 @@ html {
 
 .logo-container {
     position: absolute;
+    font-family: Calibri;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
     font-size: 400%;
     color: white;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 2px 2px 4px rgb(121, 117, 117);
 }
 
 #search-form {
