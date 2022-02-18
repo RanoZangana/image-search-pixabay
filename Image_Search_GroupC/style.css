@@ -82,9 +82,14 @@ button {
     border-radius: 10px;
 }
 
-button:active {
-    background-color: rgb(139, 213, 216);
+button:disabled {
+    background-color: rgb(187, 187, 187);
 }
+
+/* Gör ingenting?*/
+/* button:active {
+    background-color: rgb(139, 213, 216);
+} */
 
 button:hover:not(:disabled) {
     background-color: rgb(139, 213, 216);

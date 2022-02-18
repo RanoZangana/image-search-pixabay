@@ -47,6 +47,7 @@ function SetPageButtonStatus() {
     }
 }
 
+
 async function myPixabayParam(searchTag, searchColor, pageNumber) {
     let param = new URLSearchParams({
         key: '25592393-ccf7ee53d7b027ae015f7e308',
