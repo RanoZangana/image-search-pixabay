@@ -82,7 +82,7 @@ async function SearchPixabay(searchTag, searchColor, pageNumber) {
     for (let image of jsonPixabay.hits) {
         let li = imageTemplate.content.firstElementChild.cloneNode(true);
         li.querySelector('.results-image').src = image.largeImageURL;
-        li.querySelector('.results-image-tag').textContent = image.tags;
+        li.querySelector('.results-image-tag').textContent = image.tags.replaceAll(',', '');
         li.querySelector('.results-image-user').textContent = image.user;
         resultImageList.append(li);
     }
