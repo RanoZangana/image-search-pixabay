@@ -3,7 +3,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: Century Gothic;
-    background-color: rgb(139, 72, 72);
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(209,247,189,1) 100%); 
 }
 
 html {
@@ -65,6 +66,16 @@ input {
     height: 360px;
     object-fit: cover;
     background-color: white;
+    border-radius: 8px;
+    
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+
 }
 
 #page-buttons {
