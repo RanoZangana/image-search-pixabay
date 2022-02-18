@@ -3,10 +3,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: Century Gothic;
+    background-color: rgb(139, 72, 72);
 }
 
 html {
     padding: 30px;
+    
 }
 
 .header-container {
@@ -62,6 +64,7 @@ input {
     width: 360px;
     height: 360px;
     object-fit: cover;
+    background-color: white;
 }
 
 #page-buttons {
