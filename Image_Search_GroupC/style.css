@@ -4,7 +4,8 @@ body {
     padding: 0;
     font-family: Calibri;
     background: rgb(34,193,195);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(209,247,189,1) 100%); 
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(209,247,189,1) 100%);
+    background-repeat: no-repeat;
 }
 
 html {
@@ -43,6 +44,7 @@ html {
     justify-content: space-evenly;
     /* justify-content: center; */
     padding: 25px;
+    font-size: 18px;
 }
 
 #search-tag 
@@ -52,7 +54,7 @@ html {
     height: 50px;
     border-radius: 10px;
     font-family: Calibri;
-    font-size: large;
+    letter-spacing: 1px;
 }
 
 #search-color
@@ -62,6 +64,7 @@ html {
     font-family: Calibri;
     font-size: large;
     border: none;
+    letter-spacing: 1px;
 }
 
 #search-button
