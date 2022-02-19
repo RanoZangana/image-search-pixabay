@@ -107,11 +107,6 @@ html {
 
 }
 
-.results-image-tag
-{
-    background-color:white;
-}
-
 #page-buttons {
     display: flex;
     flex-direction: row;
