@@ -18,18 +18,10 @@ html {
     display: grid;
     justify-items: center;
     align-items: center;
-    padding: 100px;
-}
-
-.image-container {
-    position: relative;
-    object-fit: contain;
-    max-width: 100%;
-    max-height: 500px;
+    padding: 2%;
 }
 
 .logo-container {
-    position: absolute;
     font-family: Calibri;
     text-transform: uppercase;
     font-weight: bold;
