@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search</title>
+    <meta name="description" content="Search for Images with Pixibay">
+    <link rel="stylesheet" href="style.css">
+    <script src="image_search.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header-container">
+        <h1 class="logo-container">Pixabay Image Search</h1>
+    </header>
+
+    <main>
+        <form id="search-form">
+            <input type="text" id="search-tag" placeholder="Search..">
+            <select id="search-color" name="colors">
+                <option value = "white">White</option>
+                <option value = "black">Black</option>
+                <option value = "red">Red</option>
+                <option value = "blue">Blue</option>
+                <option value = "green">Green</option>
+                <option value = "yellow">Yellow</option>
+                <option value ="brown">Brown</option>
+            </select>
+            <button type="submit" id="search-button">Search</button>
+        </form>
+
+        <section id="results">
+            <ul id="results-image-list">
+                <template id="results-template">
+                 <li id=results-image>
+                    <img class="results-image" src="">
+                    <p class="results-image-tag"></p>
+                    <p class="results-image-user"></p>
+                </li>
+                </template>
+            </ul>
+        </section>
+
+        <section id="page-buttons">
+            <button type="button" id="back"><</button>
+            <button type="button" id="forward">></button>
+        </section>
+
+    </main>
+    <footer>
+        <p>Pixabay Search by Rano and Julia 🔍</p>
+    </footer>
+
+</body>
+
+</html>
