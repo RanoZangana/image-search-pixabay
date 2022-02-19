@@ -1,0 +1,137 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Calibri;
+    background: rgb(112,222,223);
+    background: linear-gradient(0deg, rgba(112,222,223,1) 0%, rgba(193,240,168,1) 100%);
+    background-repeat: no-repeat;
+}
+
+html {
+    min-height: 100%;
+    padding: 30px;
+    
+}
+
+.header-container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 2%;
+}
+
+.logo-container {
+    font-family: Calibri;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 400%;
+    color: white;
+    text-shadow: 2px 2px 4px rgb(121, 117, 117);
+}
+
+#search-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 25px;
+    font-size: 18px;
+
+}
+
+#search-tag 
+{
+    border: none;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    font-family: Calibri;
+    letter-spacing: 1px;
+    font-size: 18px;
+
+}
+
+#search-color
+{
+    border-radius: 10px;
+    height: 50px;
+    font-family: Calibri;
+    font-size: large;
+    border: none;
+    letter-spacing: 1px;
+    margin: 0 10px 0 10px;
+    font-size: 18px;
+}
+
+#search-button
+{
+    justify-content: flex-end;
+    text-align: center;
+    height: 50px;
+    font-family: Calibri;
+    letter-spacing: 2px;
+    font-size: 18px;
+    
+}
+
+#results-image-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.results-image {
+    width: 360px;
+    height: 360px;
+    object-fit: cover;
+    background-color: white;
+    border-radius: 8px;
+    
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+
+}
+
+#page-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+#back
+{
+    margin-right: 10px;
+}
+
+button {
+    background-color: rgb(95, 99, 102);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+button:disabled {
+    background-color: rgb(187, 187, 187);
+}
+
+button:hover:not(:disabled) {
+    background-color: rgb(139, 213, 216);
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+}
